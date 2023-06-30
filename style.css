@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Lato&display=swap');
+
+/* general css */
+body{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#goofy {
+  height: 10%;
+  width: 20%;
+  animation-name: slidein;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.back_button{
+  z-index: 1000;
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  height: 50px;
+  width: 50px;
+}
+
+.back_button:hover{
+  cursor: pointer;
+}
+
+/* home page css*/
+
+#home {
+  opacity: 1;
+  transition: transform 3s ease;
+}
+
+#mainPage {
+  opacity: 1;
+  background-color: rgb(39, 37, 37);
+  transition: transform 2s ease;
+}
+
+#move{
+  z-index: 1;
+  position: absolute;
+  top: 88.7%;
+  left: 45%;
+  height: 10%;
+  width: 5%;
+  animation: movement 6s infinite linear;
+  border: 1px solid transparent;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.6s ease;
+}
+
+#move:hover{
+  border-color: #04AA6D;
+  background-color: #04AA6D;
+  opacity: 1;
+}
+
+@keyframes movement {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%{
+    opacity: 0.9;
+    transform: translateY(-10px);
+  }
+  50%{
+    opacity: 0.8;
+    transform: translateY(5px);
+  }
+  75%{
+    opacity: 0.7;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#background{
+  z-index: 0;
+}
+
+#title-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.title-text{
+  font-family: 'Agdasima', sans-serif;
+  font-size: 48px;
+  opacity: 0;
+  background: transparent(200 100% 80%);
+  transform: translateY(-100%);
+  animation: drop-in 2s linear forwards;
+}
+
+.title-text::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.title-text:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.title-text::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* credits css */
+/* ANIMATION FOR CREDITS */
+
+#credits{
+  animation: fadeIn 1s linear;
+}
+
+#left {
+  line-height: 100vh;
+  position: absolute;
+  width: 50%;
+  background-color: rgb(8, 8, 8);
+  color: white;
+  height: 100%;
+  overflow: hidden;
+  font-size: 3em;
+}
+
+#right {
+  position: absolute;
+  width: 50vw;
+  color: black;
+  line-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 3em;
+  left: 50vw;
+}
+
+#button {
+  position: absolute;
+  top: 0px;
+  left: 0vw;
+  width: 100vw;
+  height: 100vw;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+}
+
+.r_text,
+.l_text {
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-duration: 16s;
+  width: 50vw;
+  text-align: center;
+}
+
+.r_text {
+  right: 100vw;
+  animation-name: animate_right;
+}
+
+.l_text {
+  left: 100vw;
+  animation-name: animate_left;
+}
+
+#l_second {
+  animation-delay: 4s;
+}
+
+#l_third {
+  animation-delay: 8s;
+}
+
+#r_second {
+  animation-delay: 4s;
+}
+
+#r_third {
+  animation-delay: 8s;
+}
+
+
+/* nav css */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#border{
+  height: 1000px;
+  width: 1000px;
+  border-style: solid;
+  border: #04AA6D;
+}
+
+/* about section */
+
+#about{
+  animation: fadeIn 1s linear;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: none;
+  z-index: 500;
+  background-color: antiquewhite;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  width: 800px;
+  max-width: 80%;
+}
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.section img {
+  max-width: 100%;
+}
+
+.section h2 {
+  margin-top: 10px;
+}
+
+.section p {
+  margin-top: 10px;
+}
+
+.image {
+  flex: 1;
+  padding: 20px;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+}
+
+#about-me {
+  font-size: 18px;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* selection screen css*/
+
+#interests{
+  top: 65%;
+  left: 56%;
+}
+
+#gaming{
+  top: 45%;
+  left: 36%;
+}
+
+#crediting{
+  top: 40%;
+  left: 16%;
+}
+
+#music_box{
+  top: 35%;
+  left: 60%;
+}
+
+
+.selection_box{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: rgb(80, 77, 77);
+  opacity: 0.2;
+}
+
+.selection_box:hover {
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 0 10px #e0a911e7, 0 0 20px #e0a911e7, 0 0 30px #e0a911e7, 0 0 40px #e0a911e7;
+}
+
+.box_image{
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+.box_image:hover{
+  opacity: 1;
+}
+
+#move_up {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10%;
+  width: 5%;
+  cursor: pointer;
+  transition: 0.6s ease;
+  animation: movement 6s infinite linear;
+  border: 1px solid transparent;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.6s ease;
+}
+
+#move_up:hover {
+  border-color: #04AA6D;
+  background-color: #04AA6D;
+  opacity: 1;
+}
+
+
+#selection_page {
+  opacity: 0;
+  transition: 3s ease;
+}
+
+#fullscreen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* game css */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+  }
+
+#game {
+  animation: fadeIn 1s linear;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+}
+
+.game_container {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: hsl(200, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+
+/* keyframe stuff */  
+@keyframes slidein {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1600px, 300px);
+    }
+    50% {
+      transform: translate(0px, 600px);
+    }
+    75% {
+      transform: translate(1600px, 200px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+}
+
+
+@keyframes animate_left {
+  0% {
+      left: 50vw;
+  }
+
+  10% {
+      left: 0vw;
+  }
+
+  20% {
+      left: 0vw;
+  }
+
+  30% {
+      left: -100vw;
+  }
+
+  100% {
+      left: -100vw;
+  }
+}
+
+@keyframes animate_right {
+  0% {
+      left: -50vw;
+  }
+
+  10% {
+      left: 0vw;
+  }
+
+  20% {
+      left: 0vw;
+  }
+
+  30% {
+      left: 100vw;
+  }
+
+  100% {
+      left: 100vw;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>something something</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxB153B641MviLd8EdJThHSLXUHs6WyCq5g&usqp=CAU">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="mainPage">
+        <div id="home">
+            <img id="background" src="celeste.gif">
+            <div id="title-box">
+                <div class="title-text">Dylan Janssen: The "Portfolio" Experience</div>
+            </div>
+            <img id="move" src="play.png" onclick="move_down()">
+        </div>
+        <div id="selection_page">
+            <img id="fullscreen-image" src="room.png">
+            <div id="interests" class="selection_box">
+                <img class="box_image" src="standing.png" onclick="show_interests()">
+            </div>
+            <div id="gaming" class="selection_box">
+                <img class="box_image" src="sitting.jpg" onclick="show_game()">
+            </div>
+            <div id="crediting" class="selection_box">
+                <img class="box_image" src="madeline.png" onclick="show_credits()">
+            </div>
+            <div id="music_box" class="selection_box">
+                <img class="box_image" src="manul.png" onclick="play_music()">
+            </div>
+        </div>
+        <div id="about">
+            <img class="back_button" src="back.png" onclick="go_home()">
+            <div class="container">
+                <div class="section">
+                  <h2>About Me</h2>
+                  <p>I'm from South Philly, been here my entire life, and I absolutely love making things. Whether that be websites, games, stories, or whatever comes to my mind, I've probably done it at least once! Sometimes I'm a bit slow with understanding things or what you may say, so please be patient with me!</p>
+                </div>
+                <div class="section">
+                  <h2>Interets</h2>
+                  <p>Going over things that I find very interesting, that would be games of all kinds, programming, being outside, and finding weird niche music artists to listen to! Just a couple things! Current games I'm super into right now are Celeste and Milk outside a bag of milk outside a bag of milk. Celeste is a difficult platformer and Milk is just a strange visual novel, which I adore for unexplainable reasons. (The page you were just on is actually from the game!)</p>
+                </div>
+                <div class="section">
+                    <p>Something kind of important to bring up is that I have a tendency to go for perfection or nothing at all, this site represents that very well. Me spending hours working on the main functions and then forgetting about everything.</p>
+                </div>
+                <div class="section">
+                    <p>Beyond that, I love animals so much, basically all of them. I love cats a ton, but so many of them are just interesting and unique to me. I also love the ocean! That's about all I feel like bringing up, bawomp for this page looking so dull.</p>
+                </div>
+              </div>
+        </div>
+        <div id="game" style="display: none;">
+            <img class="back_button" src="back.png" onclick="go_home()">
+            <h1>Game? Yeah sure</h1>
+            <div class="game_container">
+                <div id="text">Text</div>
+                <div id="option-buttons" class="btn-grid">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+                </div>
+            </div>
+        </div>
+        <div id="credits" style="display: none;">
+            <img class="back_button" src="back.png" onclick="go_home()">
+            <div id="left">
+                <span class="l_text" id="l_first">noah c</span>
+                <span class="l_text" id="l_second">Flum</span>
+                <span class="l_text" id="l_third">Net_Valued</span>
+            </div>
+            <div id="right">
+                <span class="r_text" id="r_first">made all the music!</span>
+                <span class="r_text" id="r_second">Blergh_2</span>
+                <span class="r_text" id="r_third">noah c</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
